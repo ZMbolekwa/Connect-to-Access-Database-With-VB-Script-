@@ -1,23 +1,3 @@
-Dim connStr, objConn
-
-connStr = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source= C:\Users\zizipho.a.mbolekwa\Documents\Test.accdb"
-
-'Define object type
-Set objConn = CreateObject("ADODB.Connection")
-Set objRecordSet = CreateObject("ADODB.Recordset")
-
-'Open Connection
-objConn.open connStr
-Set objRecordSet = objConn.OpenSchema(20)
-
-Do Until objRecordset.EOF
-
-    Wscript.Echo "Table name: " & objRecordset.Fields.Item("TABLE_NAME")
-
-    ' Wscript.Echo "Table type: " & objRecordset.Fields.Item("TABLE_TYPE")
-
-    Wscript.Echo
-
-    objRecordset.MoveNext
-
-Loop
+' This file has been moved to moved-code/database.vbs
+' Original content preserved in the feature/move-code branch at moved-code/database.vbs
+' To restore, move or copy moved-code/database.vbs back to the repo root.
